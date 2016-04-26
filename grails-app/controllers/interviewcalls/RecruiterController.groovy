@@ -127,4 +127,16 @@ class RecruiterController {
 			render view:'login'
 		}
 	}
+	
+	def contact(){
+		
+	}
+	
+	def search = {
+		if(params.query){
+			def recruiters = Recruiter.search(params.query,[reload:true]).results
+			[recruiters : recruiters]
+		}
+	}
+	
 }

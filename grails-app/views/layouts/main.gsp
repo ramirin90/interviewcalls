@@ -54,14 +54,50 @@ div.menu li a:hover {
 	<%--		<div id="menu">--%>
 	<%--			<nav:render/>--%>
 	<%--    	</div>--%>
-	<div class="menu">
-		<ul>
-			<li><g:link uri="/">Home</g:link></li>
-			<li><g:link controller="interviewCall" action="index">Interview Calls</g:link></li>
-			<li><g:link controller="interviewer" action="index">Interviewers</g:link></li>
-			<li><g:link controller="candidate" action="index">Candidates</g:link></li>
-		</ul>
-	</div>
+<%--	<div class="menu">--%>
+<%--		<ul>--%>
+<%--			<li><g:link uri="/">Home</g:link></li>--%>
+<%--			<li><g:link controller="interviewCall" action="index">Interview Calls</g:link></li>--%>
+<%--			<li><g:link controller="interviewer" action="index">Interviewers</g:link></li>--%>
+<%--			<li><g:link controller="candidate" action="index">Candidates</g:link></li>--%>
+<%--		</ul>--%>
+<%--	</div>--%>
+<div id='cssmenu'>
+<ul>
+   <li class='active'><g:link uri="/">Home</g:link></li>
+   <li class='has-sub'><g:link controller="interviewCall" action="index">Interview Calls</g:link>
+      <ul>
+         <li><g:link controller="interviewCall" action="index">All Interview Calls</g:link></li>
+         <li><g:link controller="interviewCall" action="create">New Interview Calls</g:link></li>
+         <li><g:link controller="interviewCall" action="search">Search for Interview Calls</g:link></li>
+      </ul>  
+   </li>
+   <li class='has-sub'><g:link controller="interviewer" action="index">Interviewers</g:link>
+      <ul>
+         <li><g:link controller="interviewer" action="index">All Interviewers</g:link></li>
+         <li><g:link controller="interviewer" action="create">New Interviewer</g:link></li>
+         <li><g:link controller="interviewer" action="search">Search for Interviewers</g:link></li>
+      </ul> 
+   </li>
+   <li class='has-sub'><g:link controller="candidate" action="index">Candidates</g:link>
+    <ul>
+         <li><g:link controller="candidate" action="index">All</g:link></li>
+         <li><g:link controller="candidate" action="create">New</g:link></li>
+         <li><g:link controller="candidate" action="search">Search</g:link></li>
+     </ul> 
+   </li>
+   <li class='has-sub'><g:link controller="recruiter" action="index">Recruiters</g:link>
+    <ul>
+         <li><g:link controller="recruiter" action="index">All</g:link></li>
+         <li><g:link controller="recruiter" action="create">New</g:link></li>
+         <li><g:link controller="recruiter" action="search">Search</g:link></li>
+     </ul> 
+   </li>
+<%--   <li><g:link controller="recruiter" action="contact">Contact</g:link></li>--%>
+   <li><g:link controller="recruiter" action="login">Login</g:link></li>
+<%--   <li class='last'><a href='#'><span>Contact</span></a></li>--%>
+</ul>
+</div>
 	<g:loginToggle />
 	<g:layoutBody />
 	<div class="footer" role="contentinfo"></div>

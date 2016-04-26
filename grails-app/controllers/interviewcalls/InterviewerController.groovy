@@ -101,4 +101,17 @@ class InterviewerController {
             '*'{ render status: NOT_FOUND }
         }
     }
+	
+	def contact(){
+		
+	}
+	
+
+	def search = {
+		if(params.query){
+			def interviewers = Interviewer.search(params.query,[reload:true]).results
+			[interviewers : interviewers]
+		}
+	}
+	
 }

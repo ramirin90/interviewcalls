@@ -7,7 +7,7 @@ class Recruiter {
 	String address
 	String username
 	String password
-	
+	static searchable = true
 	
 //	static hasMany = [phone:String, email:String, skills : String, area : String]
 	

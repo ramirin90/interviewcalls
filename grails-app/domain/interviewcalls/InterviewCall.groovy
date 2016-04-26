@@ -17,7 +17,7 @@ class InterviewCall {
 	}
 	
 	String toString(){
-		return " Position: "+position+" - Interviewer: "+interviewer+" - Candidate: "+candidate+" - Date: "+date
+		return "id: "+id +"- Position: "+position+" - Interviewer: "+interviewer+" - Candidate: "+candidate;
 	}
 	    static constraints = {
 			 position     size: 1..30, blank: false, unique: false

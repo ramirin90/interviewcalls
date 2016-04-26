@@ -101,4 +101,12 @@ class CandidateController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+	
+	def search = {
+		if(params.query){
+			def candidates = Candidate.search(params.query,[reload:true]).results
+			[candidates : candidates]
+		}
+	}
 }

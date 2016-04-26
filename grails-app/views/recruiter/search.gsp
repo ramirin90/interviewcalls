@@ -14,7 +14,7 @@
 }
     
     </style>
-    <title>Interview Calls Event Search Results</title>
+    <title>Interview Calls Recruiters Search Results</title>
   </head>
   <body>
     <div class="nav" role="navigation">
@@ -23,7 +23,7 @@
       </ul>
     </div>
     <div id="homeSearch">
-      <g:form controller="interviewCall" action="search">
+      <g:form controller="recruiter" action="search">
         <label>Search:</label>
         <input id="query" type="text" name="query" />
         <input type=submit value="Go" />
@@ -33,10 +33,10 @@
       <h1>Search Results</h1>
       <br />
       <ol class="property-list tekEvent">
-        <g:if test="${calls}">
-          <g:each in="${calls}" var="call">
+        <g:if test="${recruiters}">
+          <g:each in="${recruiters}" var="rec">
             <li>
-              <g:link action="show" id="${call.id}">${call}</g:link>
+              <g:link action="show" id="${rec.id}">${rec}</g:link>
 <%--				<h6>${call}</h6>--%>
 <%--				<label>${call}</label>--%>
 <%--				<g:link action="show">{call}</g:link>--%>
